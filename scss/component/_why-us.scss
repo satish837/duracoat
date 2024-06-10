@@ -1,0 +1,44 @@
+.why-us-wrap{
+    max-width: 1366px;
+    margin: 0px auto;
+    padding: 0px;
+    @include mobile{
+        width: 90%;
+    }
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        @include mobile{
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        li{
+            width: 15%;
+            margin: 0px 2%;
+            padding: 0px;
+            @include mobile{
+                width: 45%;
+                margin: 1rem 0;
+            }
+            .thumb{
+                width: 100%;
+                margin: 0px;
+                padding: 0px;
+                img{
+                    width: 100%;
+                }
+            }
+            .text{
+                width: 100%;
+                text-align: center;
+                font-size: 1.125rem;
+                color: $grey-text;
+                padding: 0.5rem 0;
+                @include mobile{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

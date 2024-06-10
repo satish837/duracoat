@@ -1,0 +1,302 @@
+.expert-service-block{
+    max-width: 1366px;
+    margin: 0px auto;
+    padding: 0px;
+    background: $dull-white;
+    padding: 5rem 3rem;
+    @include mobile{
+        width: 100%;
+    }
+    .section-heading{
+        &::after{
+            width: 9rem;
+        }
+    }
+    .service-type{
+        width: 100%;
+        margin: 0px;
+        padding: 1rem 0;
+        @include mobile{
+            padding: 0 0 1rem 0;
+        }
+        ul{
+            display: flex;
+            justify-content: flex-start;
+            align-self: center;
+            @include mobile{
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            li{
+                margin: 0 3rem 0 0;
+                padding:0;
+                color: $black;
+                position: relative;
+                font-weight: 600;
+                @include mobile{
+                    font-size: 1.2rem;
+                    margin: 0.5rem 0;
+                }
+            }
+        }
+    }
+    .text-input-container{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            @include mobile{
+                flex-direction: column;
+            }
+            li{
+                width: 23%;
+                margin: 0px;
+                padding: 0px;
+                @include mobile{
+                    width: 100%;
+                    margin-bottom: 1.4rem;
+                }
+                input[type="text"]{
+                    width: 100%;
+                    margin: 0px;
+                    padding: 0.5rem 0;
+                    background: none;
+                    border: none;
+                    border-bottom: 1px solid $accent-grey;
+                    text-align: left;
+                    font-size: 0.875rem;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+    .form-btn-container{
+        width: 100%;
+        margin: 2.5rem 0 0 0;
+        padding: 0px;
+        @include mobile{
+            margin: 1rem 0 0 0;
+        }
+        ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include mobile{
+                flex-direction: column;
+            }
+            
+            li{
+                width: auto;
+                margin: 0px;
+                padding: 0px 0 1rem 0;
+                position: relative;
+                
+                label {
+                    display: flex; 
+                  align-items: center; 
+                    color: $accent-grey;
+                    font-size:0.78125vw;
+                    position: relative;
+                    @include mobile{
+                        align-items: flex-start;
+                        font-size: 0.75rem;
+                    }
+                    span {
+                        width: 20px;
+                        height: 20px;
+                        display: flex;
+                        justify-content: center;
+                        border: 1px solid $accent-grey;
+                        margin-right: 15px;
+                        border-radius: 3px;
+                        transition: all .3s;
+                        @include mobile{
+                            width: 50px;
+                            height: 20px;
+                        }
+                    }
+                }
+                
+                input[type="checkbox"] {
+                    width: 0;
+                    height: 0;
+                    opacity: 0;
+                    position: absolute;
+                    &:checked + label {
+                        span {
+                            border: 1px solid $accent-grey;
+                            animation: bounce 250ms;
+                            @include mobile{
+                                border: 0px solid $accent-grey;
+                                background-color: $accent-grey;
+                                width: 50px;
+                                height: 20px;
+                            }
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: 6px;
+                                left: 4px;
+                                border-right: 3px solid transparent;
+                                border-bottom: 3px solid transparent;
+                                transform: rotate(45deg);
+                                transform-origin: 0% 100%;
+                                animation: checked-box 125ms 250ms forwards;
+                            }
+                        }
+                    }
+                }
+                &.submit{
+                    width: 25%;
+                    @include mobile{
+                        width: 100%;
+                    }
+                    button[type="submit"]{
+                        width: 100%;
+                        margin: 0px;
+                        padding: 1rem 3rem;
+                        background: $accent-red;
+                        border: none;
+                        color: $white;
+                        font-size: 1.5rem;
+                        cursor: pointer;
+                        transition: $base-transition;
+                        border: 2px solid transparent;
+                        font-weight: 600;
+                        @include mobile{
+                            padding: 1rem 3rem;
+                            width: 100%;
+                        }
+                        &:hover{
+                            background: $white;
+                            color: $accent-red;
+                            border: 2px solid $light-black;
+                        }
+    
+                    }
+                }
+                
+                @keyframes checked-box {
+                    0% {
+                        width: 0;
+                        height: 0;
+                        border-color: $accent-grey;
+                        transform: translate(0,0) rotate(45deg);
+                    }
+                    33% {
+                        width: 4px;
+                        height: 0;
+                        border-color: $accent-grey;
+                        transform: translate(0,0) rotate(45deg);
+                    }
+                    100% {
+                        width: 4px;
+                        height: 8px;
+                        border-color: $accent-grey;
+                        transform: translate(0,-8px) rotate(45deg);
+                    }
+                }
+                
+                @keyframes bounce {
+                    0% {
+                        transform: scale(1);
+                    }
+                    33% {
+                        transform: scale(.7);
+                    }
+                    100% {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+}
+.radio-container{
+    width: 100%;
+    margin: 0px;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    @include mobile{
+        justify-content: flex-start;
+    }
+    .radio {
+        margin: 0.5rem;
+        line-height: 1.6;
+        cursor: pointer;
+        @include mobile{
+            margin: 0px;
+        }
+        input[type="radio"] {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          + .radio-label {
+            cursor: pointer;
+            font-weight: 500;
+            @include mobile{
+                padding-left: 1.5rem;
+                font-size: 1rem;
+            }
+            &:before {
+              content: '';
+              background: $white;
+              border-radius: 100%;
+              border: 1px solid darken($black, 25%);
+              display: inline-block;
+              width: 1rem;
+              height: 1rem;
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              margin-left: -2rem;
+              cursor: pointer;
+              text-align: center;
+              transition: all 250ms ease;
+              @include mobile{
+                margin-left: -1.5rem;
+              }
+            }
+          }
+          &:checked {
+            + .radio-label {
+              &:before {
+                background-color: $black;
+                box-shadow: inset 0 0 0 4px $white;
+              }
+            }
+          }
+          &:focus {
+            + .radio-label {
+              &:before {
+                outline: none;
+                border-color: $black;
+              }
+            }
+          }
+          &:disabled {
+            + .radio-label {
+              &:before {
+                box-shadow: inset 0 0 0 4px $white;
+                border-color: darken($black, 25%);
+                background: darken($black, 25%);
+              }
+            }
+          }
+          + .radio-label {
+            &:empty {
+              &:before {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+}

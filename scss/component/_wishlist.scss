@@ -1,0 +1,19 @@
+.wishlist-block-wrap{
+    background: #F8F8F8;
+    padding: 1rem;
+    padding-bottom: 3rem;
+    .wrapper{
+        max-width: 1366px;
+        margin: 0px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .prd-cont{
+            width: calc(25% - 1rem);
+            margin-bottom: 1rem;
+            @include mobile{
+                width: 100%;
+            }
+        }
+    }
+}

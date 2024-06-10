@@ -1,0 +1,75 @@
+.steps{
+    width: 100%;
+    margin: 0 0 0 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: -0.5rem;
+    ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        li{
+            width: 33%;
+            margin: 0px;
+            padding: 0px;
+            height: 5px;
+            background: $grey-text;
+            position: relative;
+            @include mobile{
+                width: 24%;
+            }
+            &.filled{
+                background: $accent-blue;
+                @include mobile{
+                    width: 50%;
+                }
+                span{
+                    display: block;
+                }
+                &.processed{
+                    opacity: 0.5;
+                    @include mobile{
+                        width: 24%;
+                    }
+                    span{
+                        @include mobile{
+                            display: none;
+                        }
+                    }
+                }
+                &::after{
+                    content: "\f05d";
+                    font-family: "FontAwesome";
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 30px;
+                    height: 30px;
+                    background: $accent-blue;
+                    border-radius: 50px;
+                    color: $white;
+                    font-size: 1.4rem;
+                    text-align: center;
+                    line-height: 30px;
+                }
+
+            }
+            span{
+                width: auto;
+                display: inline-block;
+                position: absolute;
+                left: 50%;
+                top: 1rem;
+                text-align: center;
+                transform: translateX(-50%);
+                font-size: 1.125rem;
+                color: $grey-text;
+                @include mobile{
+                    display: none;
+                }
+            }
+        }
+    }
+}

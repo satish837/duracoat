@@ -1,0 +1,344 @@
+.paint-visualiser-wrap{
+    max-width: 1366px;
+    margin: 3rem auto 0 auto;
+    padding: 2rem 2rem 2rem 2rem;
+    background: $dull-white;
+    position: relative;
+    @include mobile{
+        padding: 2rem 0;
+    }
+    .container{
+        width: 100%;
+        padding: 0 1rem;
+        margin-top: 3rem;
+        h3{
+            text-align: center;
+            margin: 0px;
+            padding: 0px;
+            color: $accent-blue;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .paintable-photos{
+            width: 95%;
+            margin: 0px auto;
+            padding: 0px 0 0 0;
+            @include mobile{
+                width: 100%;
+            }
+            ul{
+                padding: 0 0 3rem 0;
+                li{
+                    width: 18%;
+                    margin: 0 1.2%;
+                    @include mobile{
+                        width: 40%;
+                    }
+                    .thumb{
+                        width: 100%;
+                        border: 2px solid transparent;
+                        transition: $base-transition;
+                        img{
+                            width: 100%;
+                            display: block;
+                        }
+                    }
+                    &:hover{
+                        .thumb{
+                            border: 2px solid $accent-red;
+                        }
+                    }
+                }
+                .dot{
+                    width: auto;
+                    margin: 0 8px;
+                }
+            }
+        }
+        .or{
+            width: 22%;
+            margin: 2rem auto;
+            padding: 0px;
+            position: relative;
+            text-align: center;
+            font-size: 1.125rem;
+            color: $accent-grey;
+            font-weight: 700;
+            &::after{
+                height: 2px;
+                width: 100%;
+                position: absolute;
+                left: 0px;
+                top: 50%;
+                transform: translateY(-50%);
+                content: "";
+                border-top: 2px dashed $accent-grey;
+                z-index: 1;
+            }
+            span{
+                background: $dull-white;
+                display: inline-block;
+                padding: 0.2rem;
+                position: relative;
+                z-index: 2;
+            }
+        }
+
+        .form-group {
+            width: 50%;
+            margin: 0px auto;
+            @include mobile{
+                width: 100%;
+            }
+            .file-up {
+                position: absolute;
+                visibility: hidden;
+                opacity: 0;
+              }
+              
+              .file-up-btn {
+                font-size: 0.8em;
+                font-weight: 600;
+                padding: 7px 10px;
+                background: $accent-blue;
+                color: $white;
+                letter-spacing: 0.7px;
+                width: 100%;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: left;
+                padding: 1.5rem;
+                @include mobile{
+                    flex-direction: column;
+                    text-align: center;
+                }
+              }
+              .file-up-btn .icon{
+                width: 8%;
+              }
+              .file-up-btn .cont{
+                width: 75%;
+                @include mobile{
+                    width: 100%;
+                }
+
+                h4{
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    @include mobile{
+                        font-size: 1.1rem;
+                    }
+                }
+                h5{
+                    font-size: 0.875rem;
+                    font-weight: normal;
+                }
+              }
+              
+              .uploaded {
+                font-size: 0.8em;
+                font-weight: 500;
+                word-break: break-all;
+                text-align: left;
+                color: $white;
+                background: $accent-blue;;
+              }
+          }
+          .pallet-option{
+            padding-top: 1rem;
+          }
+          .pallets{
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            ul{
+                display: grid;
+                grid-template-columns: repeat(7, 1fr);
+                grid-column-gap: 1.5rem;
+                grid-row-gap: 1.5rem;
+                @include mobile{
+                    grid-template-columns: repeat(5, 1fr);
+                    grid-column-gap: 1rem;
+                    grid-row-gap: 1rem;
+                }
+                li{
+                    margin: 0px;
+                    padding: 2rem;
+                    width: 100%;
+                    @include mobile{
+                        padding: 1.5rem;
+                    }
+                }
+            }
+          }
+          .cta-solid{
+            a{
+                padding: 0.7rem 5rem 0.7rem 5rem;
+                @include mobile{
+                    padding: 0.7rem 2rem 0.7rem 2rem;
+                }
+
+            }
+          } 
+          .visualise-your-room{
+            width: 100%;
+            margin: 0px;
+            padding: 1rem 0 0 0;
+            .top-cta-wrap{
+                width: 100%;
+                padding: 1rem;
+                margin: 0px;
+                background: rgba($black, 0.05);
+                ul{
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    @include mobile{
+                        justify-content: space-between;
+                    }
+                    li{
+                        margin-left: 0.5rem;
+                        @include mobile{
+                            margin-left: 0;
+                        }
+
+                        a{
+                            padding:0.5rem 1rem;
+                            color: $accent-red;
+                            border: 1px solid $accent-red;
+                            font-size: 1rem;
+                            background: $white;
+                            transition: $base-transition;
+                            text-decoration: none;
+                            font-weight: 600;
+                            @include mobile{
+                                font-size: 0.9rem;
+                                padding: 0.5rem 0.8rem;
+                                span{
+                                    display: none;
+                                }
+                            }
+                            svg{
+                                width: 12px;
+                                height: auto;
+                                transition: $base-transition;
+                            }
+                            &:hover{
+                                background: $accent-red;
+                                color: $white;
+                                svg{
+                                    path{
+                                        fill: $white;
+                                    }
+                                    rect{
+                                        fill: $white;
+                                    }
+
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .visual{
+                width: 100%;
+                margin: 0px;
+                padding: 0px;
+                position: relative;
+                img{
+                    width: 100%;
+                }
+            }
+            .btm-options{
+                width: 100%;
+                margin: 0px;
+                padding: 1rem 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                @include mobile{
+                    flex-direction: column;
+                }
+                .left{
+                    width: 50%;
+                    margin: 0px;
+                    padding: 0px;
+                    @include mobile{
+                        width: 100%;
+                    }
+                    ul{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        @include mobile{
+                            justify-content: space-between;
+                        }
+                        li{
+                            margin-right: 1rem;
+                            padding: 1.8rem 3rem;
+                            @include mobile{
+                                width: 31%;
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+                .right{
+                    width: 50%;
+                    margin: 0px;
+                    padding: 0px;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    @include mobile{
+                        margin-top: 1.5rem;
+                        width: 100%;
+                        justify-content: center;
+                    }
+                    .cta-solid{
+                        width: auto;
+                        margin: 0;
+                        a{
+                            padding: 0.7rem 2rem;
+                        }
+                    }
+                }
+            }
+          }
+    }
+    &.final-screen{
+        padding: 0px;
+        background: none;
+        .visualise-your-room{
+            padding: 0px;
+            .btm-options{
+                ul{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    width: 100%;
+                    @include mobile{
+                        flex-direction: column;
+                    }
+                    li{
+                        width: 32%;
+                        margin: 0px;
+                        padding: 2rem;
+                        font-size: 1rem;
+                        color: $black;
+                        text-align: center;
+                        font-weight: 600;
+                        @include mobile{
+                            width: 100%;
+                            margin: 0.5rem 0;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

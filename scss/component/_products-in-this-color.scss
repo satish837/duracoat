@@ -1,0 +1,30 @@
+.product-in-this-color-slider{
+    max-width: 1366px;
+    margin: 0px auto;
+    padding: 0px 0 5rem 0;
+    width: 90%;
+    ul{
+        list-style: none;
+        margin: 0px;
+        padding: 0px 0 0rem 0;
+        li{
+            width: 23%;
+            margin: 0px 1rem;
+            padding: 0px;
+            @include mobile{
+                width: 70%;
+                margin: 0 1rem;
+            }
+            .caption{
+                font-size: 1.125rem;
+                font-weight: 700;
+                color: $accent-blue;
+                margin: 1rem 0;
+                padding: 0px;
+            }
+        }
+    }
+    .flickity-page-dots{
+        bottom: -4.5rem;
+    }
+}

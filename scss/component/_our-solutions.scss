@@ -1,0 +1,85 @@
+.our-solutions{
+    max-width: 1366px;
+    margin: 0px auto;
+    padding: 1.5rem 0 0 0;
+    position: relative;
+    ul{
+        li{
+            width: 32%;
+            margin: 0px;
+            padding: 0 2rem;
+            @include mobile{
+                width: 75%;
+                padding: 0 0.5rem;
+            }
+            &:nth-child(2n+0) {
+                margin: 0 2rem;
+                @include mobile{
+                    margin: 0;
+                }
+              }
+              &.is-selected + li{
+                padding: 0px;
+                @include mobile{
+                    padding: 0 0.5rem;
+                }
+              }
+            .thumb{
+                width: 100%;
+                margin: 0px;
+                padding: 0px;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    display: block;
+                    transition: $base-transition;
+                }
+            }
+            &:hover{
+                .thumb{
+                    img{
+                        transform: scale(1.15);
+                    }
+                }
+               
+            }
+            .caption{
+                width: 100%;
+                padding:1.5rem 1rem;
+                background: $dull-white;
+                font-size: 1.5rem;
+                    color: $light-black;
+                    margin: 0px;
+                    line-height: 1;
+                    font-weight: 600;
+                    text-align: center;
+                    @include mobile{
+                        font-size: 1rem;
+                    }
+            }
+        }
+    }
+    .cta{
+        width: 32%;
+        position: absolute;
+        right: 0px;
+        bottom: 0;
+        @include mobile{
+            position: static;
+            width: 100%;
+            margin: 4rem 0 0 0;
+        }
+        a{
+            text-transform: none;
+        }
+    }
+    .flickity-page-dots{
+        display: none;
+        @include mobile{
+            display: block;
+            width: 100%;
+            bottom: -50px;
+        }
+    }
+}
+

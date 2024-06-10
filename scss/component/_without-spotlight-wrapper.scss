@@ -1,0 +1,278 @@
+.w-spotlight-wrap{
+    width: 100%;
+    margin: 150px 0 0 0;
+    padding: 0px;
+}
+.details-banner{
+    width: 1366px;
+    margin: 2rem auto;
+    padding: 0px 1rem;
+    width: 90%;
+    .slider-with-thumbnail{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        @include mobile{
+            flex-direction: column;
+        }
+        .slider-wrapper{
+            width: 60%;
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            @include mobile{
+                width: 100%;
+            }
+            .slider-nav-holder{
+                width: 10%;
+                margin: 0px;
+                padding: 0px;
+                @include mobile{
+                    display: none;
+                }
+                .carousel-nav {
+                    width: 300px;
+                    transform: rotate(90deg) translate(-21%, -100%);
+                    transform-origin: left top;
+                    
+                    .carousel-cell {
+                        transform: rotate(-90deg);
+                        width: 75px;
+                        height: 100px;
+                        cursor: pointer;
+                        border: 1px solid transparent;
+                        margin-right: 1rem;
+                        /* selected cell */
+                        img{
+                            transform: rotate(-90deg) scale(1.5);
+                            width: 100%;
+                            display: block;
+                            position: absolute;
+                            left: 0px;
+                            top: 30px;
+                            
+                        }
+                        &.is-nav-selected{
+                            &::after{
+                                content: "";
+                                border: 1px solid $accent-red;
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                width: 99%;
+                                height: 99%;
+                            }
+                        }
+                      }
+                  }
+            }
+            .slider-banner-holder{
+                width: 85%;
+                margin: 0px;
+                padding: 0px;
+                @include mobile{
+                    width: 100%;
+                }
+                .carousel-cell{
+                    width: 100%;
+                    img{
+                        width: 100%;
+                    }
+                }
+                
+               
+            }
+        }
+        .right-cont{
+            width: 38%;
+            margin: 0px;
+            padding: 0px 0rem 0 0;
+            position: relative;
+            @include mobile{
+                width: 100%;
+                padding: 2rem 0;
+            }
+            .like-share{
+                width: auto;
+                position: absolute;
+                right: 0px;
+                top: 0rem;
+                z-index: 9;
+                ul{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    li{
+                        margin: 0 0.5rem;
+                        padding: 0px;
+                        font-size: 1.5rem;
+                        .like{
+                            svg{
+                                .heart{
+                                    stroke: $black;
+                                }
+                                
+                            }
+                        }
+                        a{
+                            color: $black;
+                            &:hover{
+                                color: $accent-blue;
+                            }
+                        }
+                    }
+                }
+            }
+            .heading{
+                width: 100%;
+                margin: 0 0 1.5rem 0;
+                padding: 0 0 0 0;
+                font-size: 2rem;
+                color: $accent-blue;
+                line-height: 1;
+                font-weight: 600;
+                text-align: left;
+                position: relative;
+                &.single{
+                    margin-bottom: 3rem;
+                }
+                @include mobile{
+                    font-size: 1.8rem;
+                    text-align: center;
+                }
+                &::after{
+                    content: "";
+                    width: 4.375rem;
+                    height: 2px;
+                    background: $accent-red;
+                    position: absolute;
+                    left: 0%;
+                    top: 120%;
+                    @include mobile{
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+            p{
+                font-size: 1rem;
+                a{
+                    color: $accent-red;
+                }
+            }
+            .color-code{
+                width: 100%;
+                margin: 1rem 0;
+                padding: 0px;
+                font-size: 1rem;
+                font-weight: 700;
+                span{
+                    font-weight: normal;
+                }
+            }
+            .shade-combination{
+                width: 100%;
+                margin: 1rem 0 0 0;
+                padding: 0px;
+                h5{
+                    font-size: 0.875rem;
+                    font-weight: 700;
+                    margin: 0px 0 0.2rem 0;
+                    padding: 0px;
+                    color: $black;
+                }
+                .shades{
+                    width: 100%;
+                    margin: 0px;
+                    padding: 0px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    .left{
+                        width: 30%;
+                        height: 100px;
+                        margin: 0px;
+                        padding: 0px;
+                        position: relative;
+                        &::after{
+                            content: "";
+                            height: 30px;
+                            width: 30px;
+                            position: absolute;
+                            background: url(../img/tick.png) center center no-repeat;
+                            background-size: 100%;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                    .right{
+                        width: 65%;
+                        margin: 0px;
+                        padding: 0px;
+                        .color-grid{
+                            width: 100%;
+                            margin: 0px 0 1.2rem 0;
+                            padding: 0px;
+                            ul{
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: flex-start;
+                                li{
+                                    width: 33.33%;
+                                    margin: 0px;
+                                    padding: 0px;
+                                    height: 40px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .availability{
+                    width: 100%;
+                    margin: 0.5rem 0;
+                    padding: 0px;
+                    font-weight: 700;
+                    a{
+                        color: $accent-red;
+                        font-weight: normal;
+                    }
+                }
+                .disclaimer{
+                    width: 100%;
+                    margin: 1rem 0;
+                    padding: 0px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    color: $accent-grey;
+                    @include mobile{
+                        flex-direction: column;
+                    }
+                    .left{
+                        width: 22%;
+                        margin: 0px;
+                        padding: 0px;
+                        font-weight: 700;
+                        @include mobile{
+                            width: 100%;
+                        }
+                    }
+                    .right{
+                        width: 78%;
+                        margin: 0px;
+                        padding: 0px;
+                        @include mobile{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,99 @@
+.bottom-search-wrap{
+    width: 100%;
+    margin: 0px;
+    padding: 5rem 3rem;
+    background: $dull-white;
+    @include mobile{
+        padding: 3rem 1.5rem;
+    }
+    .section-heading{
+        &::after{
+            width: 9rem;
+        }
+    }
+    .search-cont{
+        width: 60%;
+        margin: 1rem auto;
+        position: relative;
+        @include mobile{
+            width: 100%;
+        }
+        .input-text{
+            border: 0;
+            border: $accent-grey solid 1px;
+            padding:1.5rem 2rem;
+            outline: 0;
+            background: $white;
+            color: $accent-grey;
+            width: 100%;
+            font-size: 1.4rem;
+            &::placeholder{
+                opacity: 0.7;
+            }
+            @include mobile{
+                padding-right: 30px;
+            }
+        }
+        
+        .submit-button{
+            width: auto;
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translate(0,-50%);
+            display: flex;
+            background: transparent;
+            border: 0;
+            cursor: pointer;
+            color: #979797;
+            align-items: center;
+            font-size: 0.9rem;
+            @include mobile{
+                width: 20px;
+            }
+           
+            svg{
+                width: 100%;
+                path{
+                    fill: #979797;
+                }
+            }
+        }
+    }
+    .search-tags{
+        width: 80%;
+        margin: 0px auto;
+        padding: 0px;
+        @include mobile{
+            width: 100%;
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            li{
+                width: auto;
+                margin:  0.5rem 1rem;
+                padding: 0px;
+                @include mobile{
+                    margin: 0.5rem;
+                }
+                a{
+                    display: inline-block;
+                    width: auto;
+                    border: 1px solid #707070;
+                    color: #707070;
+                    padding: 0.5rem 1.5rem;
+                    text-decoration: none;
+                    font-size: 0.9rem;
+                    background: $white;
+                    line-height: 1;
+                    @include mobile{
+                        font-size: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

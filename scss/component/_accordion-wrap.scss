@@ -1,0 +1,57 @@
+.accr-wrap{
+    padding: 0;
+    max-width: 1366px;
+    margin: 0px auto;
+    .head{
+        padding: 1rem 2rem;
+        font-size: 20px;
+        font-weight: 600;
+        position: relative;
+        color: $accent-grey;
+        background: $dull-white;
+        margin: 2px 0;
+        cursor: pointer;
+        @include mobile{
+            padding: 1rem;
+            padding-right: 2rem;
+        }
+        &:after{
+            position: absolute;
+            width: 20px;
+            top: 50%;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            content: "+";
+            position: absolute;
+            font-family: "FontAwesome"; 
+            font-weight: 900; 
+            font-size: 2rem;
+            color: $light-black;
+            text-align: center;
+            @include mobile{
+                right: 1rem;
+            }
+        }
+        &.active{
+            border-radius: 4px;
+            &:after{
+                content: "-";
+                font-family: "FontAwesome"; 
+            }
+        }
+    }
+    .content{
+        font-weight: 500;
+        font-size: 16px;
+        padding: 1rem 2rem;
+        display: none;
+        color: $accent-grey;
+        @include mobile{
+            padding: 1rem 0;
+        }
+        p{
+            padding: 0.5rem 0;
+        }
+    }
+}

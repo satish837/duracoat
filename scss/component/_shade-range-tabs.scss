@@ -1,0 +1,129 @@
+.shade-range{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    .wrap{
+        max-width: 1366px;
+        margin: 0px auto;
+    }
+    .tabs {
+        margin: 1rem;
+        padding: 0;
+          list-style: none;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;        
+          .active-tab {
+              border-bottom: none;
+              position: relative;
+              color: $accent-blue;
+          
+              &:after {
+                  width: 100%;
+                  height: 2px;
+                  position: absolute;
+                  content: "";
+                  bottom: 0em;
+                  left: 50%;
+                  transform: translate(-50%);
+                  background: $accent-red;
+              }
+          }
+        
+          li {
+              display: inline-block;
+              cursor: pointer;
+              color: $accent-grey;
+              margin: 0 2rem;
+              font-size: 2rem;
+            font-weight: 600;
+            position: relative;
+            @include mobile{
+                font-size: 1.8rem;
+            }
+            a{
+                color: $accent-grey;
+                text-decoration: none;
+            }
+            @include mobile{
+                margin: 0 1rem;
+                text-align: center;
+            }
+
+          
+              &:first-child {
+                &::before{
+                    width: 2px;
+                    right: -2rem;
+                    position: absolute;
+                    top: 50%;
+                    height: 80%;
+                    content: "";
+                    transform: translate(-50%, -50%);
+                    background: $accent-grey;
+                    @include mobile{
+                        right: -1rem;
+                    }
+                }
+              }
+          }
+      }
+      
+      .tabs-content {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        
+          li.tabs-content-block {
+              display: none;
+              .head{
+                width: 35%;
+                margin: 0px auto;
+                color: $accent-grey;
+                font-size: 1rem;
+                text-align: center;
+                @include mobile{
+                    width: 100%;
+                }
+              }
+              .banner{
+                width: 100%;
+                margin: 2rem auto 0 auto;
+                img{
+                    width: 100%;
+                }
+            }
+            .ancillary-cont{
+                background: $dull-white;
+                .prd-cont{
+                    @include mobile{
+                        width: 80%;
+                        margin: 1rem;
+                    }
+                }
+            }
+            .cta{
+                a{
+                    text-transform: none;
+                }
+            }
+            .flickity-page-dots{
+                display: none;
+                @include mobile{
+                    display: block;
+                    bottom: -50px;
+                    width: 100%;
+                }
+               
+                .dot{
+                   
+                    @include mobile{
+                        width: auto;
+                    }
+                    
+                }
+            }
+          }
+      }
+}

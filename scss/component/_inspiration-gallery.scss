@@ -1,0 +1,57 @@
+.inspiration-gallery{
+    max-width: 1366px;
+    padding:  1.5rem 0 0rem 0rem;
+    margin: 0px auto;
+    @include mobile{
+        padding: 1.5rem 0.5rem 0rem 0.5rem;
+    }
+    ul{
+        li{
+            width: 32rem;
+            margin-right: 1.5rem;
+            padding: 0px;
+            @include mobile{
+                width: 100%;
+            }
+            .thumb{
+                width: 100%;
+                margin: 0px;
+                padding: 0px;
+                img{
+                    width: 100%;
+                    display: block;
+                }
+            }
+            .caption{
+                width: 100%;
+                padding:1.5rem 1rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: $dull-white;
+                .text{
+                    font-size: 1.5rem;
+                    color: $light-black;
+                    margin: 0px;
+                    line-height: 1;
+                    font-weight: 600;
+                }
+                .icon{
+                    width: 1.638rem;
+                    cursor: pointer;
+                    img{
+                        width: 100%;
+                        display: block;
+                    }
+                    svg{
+                        transform: scale(2);
+                    }
+                }
+            }
+        }
+    }
+
+    .flickity-page-dots{
+        bottom: -50px;
+    }
+}

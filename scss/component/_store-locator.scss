@@ -1,0 +1,83 @@
+.store-locator{
+    max-width: 1366px;
+    margin: 0px auto;
+    padding: 3rem 0;
+    background: url(../img/store-locator-bg.jpg) center center no-repeat;
+    background-size: cover;
+    min-height: 223px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    text-align: center;
+    .section-heading{
+        color: $white;
+    }
+    .locator{
+        width: 30%;
+        margin: 0px auto;
+        padding: 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        @include mobile{
+            width: 75%;
+        }
+        .icon{
+            width: 1.2rem;
+            margin: 0px 0 -1px 0;
+            padding: 0px;
+            img{
+                display: block;
+                width: 100%;
+            }
+        }
+        .locate-wrap{
+            width: 93%;
+            position: relative;
+            .input-text{
+                border: 0;
+                border-bottom: rgba($white, $alpha: 0.9) solid 2px;
+                padding:0 1rem 0.5rem 1rem;
+                outline: 0;
+                background: transparent;
+                color: rgba($white, $alpha: 0.9);
+                width: 100%;
+                font-size: 0.9rem;
+                &::placeholder{
+                    opacity: 0.7;
+                    color: $white;
+                }
+                @include mobile{
+                    padding-right: 30px;
+                }
+            }
+            
+            .submit-button{
+                width: auto;
+                position: absolute;
+                right: 1rem;
+                top: 50%;
+                transform: translate(0,-50%);
+                display: flex;
+                background: transparent;
+                border: 0;
+                cursor: pointer;
+                color: $white;
+                align-items: center;
+                font-size: 0.9rem;
+                @include mobile{
+                    width: 20px;
+                    right: 0.2rem;
+                }
+                
+                svg{
+                    width: 100%;
+                    path{
+                        fill: $white;
+                    }
+                }
+            }
+        }
+    }
+}

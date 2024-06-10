@@ -1,0 +1,140 @@
+.map-wrapper{
+    @include mobile{
+        margin-top: 2.5rem;
+    }
+}
+.map-block{
+    display: flex;
+    background: #F8F8F8;
+    margin-bottom: 4rem;
+    .left{
+        padding: 2rem;
+        width: 50%;
+        text-align: center;
+        @include mobile{
+            width: 100%;
+        }
+        .block{
+            margin-bottom: 1.5rem;
+            .head{
+                font-weight: 600;
+                font-size: 22px;
+            }
+            .btn{
+                width: 250px;
+                padding: 10px 0;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 1.4;
+                background: $accent-red;
+                border: $accent-red solid 1px;
+                color: $white;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                margin: 1rem 0;
+                cursor: pointer;
+                transition: $base-transition;
+                &:hover{
+                    background: transparent;
+                    color: $accent-red;
+                }
+            }
+            .select-wrap{
+                display: flex;
+                justify-content: space-between;
+                padding: 0 10%;
+                margin-bottom: 1rem;
+                @include mobile{
+                    flex-wrap: wrap;
+                    padding: 0;
+                }
+                select{
+                    width: 48%;
+                    padding: 7px 0;
+                    border: 0;
+                    border-bottom: #707070 solid 1px;
+                    font-size: 14px;
+                    border-radius: 0;
+                    outline: 0;
+                    background: transparent;
+                    @include mobile{
+                        width: 100%;
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+        }
+        .or-wrap{
+            margin: 2rem auto;
+            max-width: 200px;
+            position: relative;
+            &:before{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background: #707070;
+                left: 0;
+                top: 50%;
+            }
+            span{
+                display: inline-block;
+                width: 35px;
+                height: 35px;
+                background: #707070;
+                border-radius: 50%;
+                font-weight: 600;
+                color: $white;
+                text-align: center;
+                line-height: 35px;
+                font-size: 0.8rem;
+                position: relative;
+                z-index: 1;
+            }
+        }
+    }
+    .right{
+        width: 50%;
+        @include mobile{
+            display: none;
+        }
+        iframe{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.paint-store-list{
+    padding-bottom: 4rem;
+}
+.duracoat-showroom-block{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+    .col{
+        width: 49%;
+        @include mobile{
+            width: 100%;
+            margin-bottom: 1.5rem;
+        }
+        .wrap{
+            background: #F8F8F8;
+            .image{
+                img{
+                    width: 100%;
+                }
+            }
+            .title-wrap{
+                padding: 1rem 1.5rem;
+                font-size: 24px;
+                font-weight: 600;
+                color: #333333;
+                @include mobile{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

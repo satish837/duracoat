@@ -1,0 +1,32 @@
+.inner-spotlight{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    img{
+        width: 100%;
+        display: block;
+    }
+    .desc{
+        width: 40%;
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        @include mobile{
+           left: 50%;
+           transform: translate(-50%, -50%);
+           width: 85%;
+        }
+        h3{
+            font-size: 2.813rem;
+            color: $white;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+
+    }
+}

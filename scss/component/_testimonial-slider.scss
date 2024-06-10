@@ -1,0 +1,75 @@
+.testimonial-slider-wrap{
+    max-width: 1366px;
+    margin: 0px auto;
+    padding: 0px;
+    @include mobile{
+        width: 90%;
+    }
+    ul{
+        list-style: none;
+        margin: 0px;
+        padding: 0px 0 3rem 0;
+        li{
+            width: 30%;
+            margin: 0px 3.33% 0 0;
+            padding: 0px;
+            @include mobile{
+                width: 80%;
+            }
+            .thumb{
+                width: 100%;
+                margin: 0px;
+                padding: 0px;
+                img{
+                    width: 100%;
+                    display: block;
+                }
+            }
+            .desc{
+                width: 100%;
+                margin: 0px;
+                padding: 1rem;
+                background: $dull-white;
+                h3{
+                    font-size: 1.5rem;
+                    color: $light-black;
+                    margin: 0px;
+                    padding: 0px;
+                    font-weight: 600;
+                    span{
+                        font-size: 1rem;
+                        font-weight: 400;
+                    }
+                }
+                p{
+                    font-size: 1rem;
+                    padding: 1rem 0;
+                    margin: 0px;
+                }
+                .read-more{
+                    text-align: right;
+                    width: 100%;
+                    margin: 0px;
+                    padding: 0px;
+                    font-weight: 600;
+                    a{
+                        color: $accent-red;
+                        font-weight: 600;
+                        text-decoration: none;
+                    }
+                }
+            }
+            
+        }
+        .flickity-prev-next-button{
+            @include mobile{
+                display: none;
+            }
+        }
+        .flickity-page-dots{
+            @include mobile{
+                width: 100%;
+            }
+        }
+    }
+}

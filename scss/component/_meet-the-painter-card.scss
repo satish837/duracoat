@@ -1,0 +1,205 @@
+.meet-painter-card-holder{
+    width: 100%;
+    margin: 1rem 0;
+    padding: 0px;
+    .contractor-card{
+        width: 100%;
+        margin: 0px;
+        background: $white;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+        flex-wrap: wrap;
+        @include mobile{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .thumb{
+            width: 30%;
+            text-align: center;
+            img{
+                width: 100%;
+            }
+        }
+        .desc{
+            width: 68%;
+            @include mobile{
+                width: 100%;
+            }
+            .contractor-name{
+                text-align: left;
+                font-size: 1.25rem;
+                padding: 0px;
+                margin: 0.2rem 0;
+                color: $light-black;
+                font-weight: 600;
+                position: relative;
+                line-height: 1;
+                .share{
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: auto;
+                    ul{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        li{
+                            width: 20px;
+                            height: 20px;
+                            margin: 0 0 0 1rem;
+                            &.like-btn{
+                                background: url(../img/heart.png) left top no-repeat;
+                            }
+                            &.share-btn{
+                                background: url(../img/share-btn.png) left top no-repeat;
+                            }
+                            &:hover{
+                                background-position: left bottom;
+                            }
+                            a{
+                                width: 20px;
+                                height: 20px; 
+                                display: block;
+                            }
+
+                        }
+                    }
+                }
+            }
+            .rating{
+                width: 100%;
+                margin: 0px;
+                padding: 0.2rem 0;
+                ul{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    li{
+                        margin: 0.5rem 0.5rem 0 0;
+                        padding: 0px;
+                        font-size: 0.875rem;
+                        width: auto;
+                        a{
+                            color: $accent-grey;
+                            text-decoration: none;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            i{
+                                color: $gold;
+                                font-size: 1.2rem;
+                                line-height: 1;
+                                margin: 0 0.5rem 0 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .experience{
+                width: 100%;
+                margin: 0.6rem 0;
+                padding: 0px;
+                font-size: 0.875rem;
+                color: $black;
+                font-weight: 700;
+                span{
+                    font-weight: normal;
+                }
+            }
+            .primery-cta{
+                width: 100%;
+                margin: 0.5rem 0;
+                padding: 0px;
+                ul{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    li{
+                        margin: 0.4rem 0.8rem  0.4rem 0;
+                        padding: 0px;
+                        width: auto;
+                        text-align: center;
+                        a{
+                            border: 1px solid rgba($accent-red, 0.6);
+                            color: rgba($accent-red, 0.6);
+                            padding: 0.4rem;
+                            display: block;
+                            text-decoration: none;
+                            font-size: 0.875rem;
+                            text-transform: uppercase;
+                            transition: all 0.3s;
+                            &:hover{
+                                background: $accent-red;
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .contactor-contact{
+            width: 100%;
+            background: $dull-white;
+            padding: 1rem;
+            margin: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            .left{
+                width: 70%;
+                margin: 0px;
+                padding: 0;
+                ul{
+                    margin: 0;
+                    padding: 0;
+                    li{
+                        width: 100%;
+                        margin: 0px;
+                        padding: 0.2rem 0;
+                        font-weight: 700;
+                        color: $black;
+                        font-size: 0.875rem;
+                        span{
+                            font-weight: normal;
+                        }
+                        a{
+                            color: $accent-red;
+                        }
+                    }
+                }
+            }
+            .right{
+                width: 30%;
+                margin: 0px;
+                padding: 0;
+                button{
+                    width: 100%;
+                    height: 100%;
+                    background: #C93128;
+                    border: none;
+                    color: $white;
+                    font-size: 1.125rem;
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+            }
+        }
+        
+        .cta{
+            margin: 1rem 0 0 0;
+            padding: 0px;
+            a{
+                &::after{
+                    content: "";
+                }
+            }
+        }
+    }
+}

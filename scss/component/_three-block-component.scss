@@ -1,0 +1,60 @@
+.three-blocks-component{
+    width: 100%;
+    margin: 0px;
+    padding: 3rem 0 0 0;
+    @include mobile{
+        padding: 1rem 0 0 0;
+    }
+    .flickity-page-dots{
+        display: none;
+        @include mobile{
+            display: block;
+            bottom: -55px;
+            width: 100%;
+        }
+        .dot{
+            border: none;
+        }
+    }
+    ul{
+        li{
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+            width: 33.3%;
+            position: relative;
+            border-left: 1px solid #DDDDDD;
+            @include mobile{
+                width: 70%;
+            }
+            &:first-child{
+                border-left: none;
+            }
+            .icon{
+                width: auto;
+                margin: 0px auto;
+            }
+            .title{
+                font-size: 1.5rem;
+                color: $light-black;
+                line-height: 1;
+                padding: 0.5rem 0;
+                font-weight: 600;
+            }
+            .desc{
+                font-size: 1rem;
+                color: $light-black;
+                line-height: 1.2;
+                padding: 0 0;
+                width: 75%;
+                margin: 0px auto;
+            }
+        
+        }
+    }
+}
+.three-blocks-component + .cta{
+    @include mobile{
+        margin-top: 5rem;
+    }
+}

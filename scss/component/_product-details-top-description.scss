@@ -1,0 +1,15 @@
+.prd-details{
+    max-width: 1366px;
+    margin: 1rem auto;
+    padding: 0px;
+    @include mobile{
+        margin: 2rem 0;
+    }
+    .wrapper{
+        width: 90%;
+        margin: 0px auto;
+        .head-desc{
+            width: 100%;
+        }
+    }
+}

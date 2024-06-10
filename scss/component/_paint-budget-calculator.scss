@@ -1,0 +1,300 @@
+.paint-budget-calculator{
+    max-width: 1366px;
+    margin: 0px auto;
+    padding: 0px;
+    background: $dull-white;
+    padding: 5rem 3rem;
+    @include mobile{
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+    .section-heading{
+        &::after{
+            width: 9rem;
+        }
+    }
+    .calculator{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: 3rem 0 0 0;
+        @include mobile{
+            flex-direction: column;
+        }
+        .left-thumb{
+            width: 46%;
+            @include mobile{
+                width: 100%;
+            }
+            img{
+                width: 100%;
+            }
+        }
+        .service-type{
+            width: 50%;
+            margin: 0px;
+            padding: 1rem 0;
+            @include mobile{
+                padding: 0 0 1rem 0;
+                width: 100%;
+            }
+            h3{
+                font-size: 1.125rem;
+                color: $black;
+            }
+            ul{
+                display: flex;
+                justify-content: flex-start;
+                align-self: center;
+                @include mobile{
+                    flex-direction: row;
+                    align-items: flex-start;
+                    flex-wrap: wrap;
+                }
+                li{
+                    margin: 0 2% 0 0;
+                    width: 30%;
+                    padding:0;
+                    color: $black;
+                    position: relative;
+                    font-weight: 600;
+                    @include mobile{
+                        width: 50%;
+                        margin: 0px;
+                    }
+                    &.textbox{
+                        width: 50%;
+                        margin: 1rem 0;
+                        @include mobile{
+                            width: 100%;
+                        }
+                        input[type="text"]{
+                            width: 100%;
+                            margin: 0px;
+                            padding: 0.5rem 0px;
+                            background: none;
+                            border: none;
+                            border-bottom: 1px solid $accent-grey;
+                            &:focus{
+                                outline: none;
+                            }
+                            
+                        }
+                    }
+                    @include mobile{
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+            .radio-container{
+                width: 100%;
+                margin: 0px;
+                padding: 1rem 0 2rem 0;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                @include mobile{
+                    justify-content: flex-start;
+                }
+                .radio {
+                    margin: 0.5rem;
+                    line-height: 1.6;
+                    cursor: pointer;
+                    input[type="radio"] {
+                      position: static;
+                      opacity: 0;
+                      cursor: pointer;
+                      + .radio-label {
+                        cursor: pointer;
+                        font-weight: 500;
+                        @include mobile{
+                            padding-left: 0;
+                            font-size: 1rem;
+                        }
+                        &:before {
+                          content: '';
+                          background: $white;
+                          border-radius: 100%;
+                          border: 1px solid darken($black, 25%);
+                          display: inline-block;
+                          width: 1rem;
+                          height: 1rem;
+                          position: absolute;
+                          top: 50%;
+                          transform: translateY(-50%);
+                          margin-left: -1.5rem;
+                          cursor: pointer;
+                          text-align: center;
+                          transition: all 250ms ease;
+                        }
+                      }
+                      &:checked {
+                        + .radio-label {
+                          &:before {
+                            background-color: $black;
+                            box-shadow: inset 0 0 0 4px $white;
+                          }
+                        }
+                      }
+                      &:focus {
+                        + .radio-label {
+                          &:before {
+                            outline: none;
+                            border-color: $black;
+                          }
+                        }
+                      }
+                      &:disabled {
+                        + .radio-label {
+                          &:before {
+                            box-shadow: inset 0 0 0 4px $white;
+                            border-color: darken($black, 25%);
+                            background: darken($black, 25%);
+                          }
+                        }
+                      }
+                      + .radio-label {
+                        &:empty {
+                          &:before {
+                            margin-right: 0;
+                          }
+                        }
+                      }
+                    }
+                  }
+            }
+            button[type="submit"]{
+                width: auto;
+                margin: 0px;
+                padding: 1rem 0rem;
+                background: $accent-red;
+                border: none;
+                color: $white;
+                font-size: 1.5rem;
+                cursor: pointer;
+                transition: $base-transition;
+                border: 2px solid transparent;
+                font-weight: 600;
+                width: 100%;
+                @include mobile{
+                    padding: 1rem 5rem;
+                    width: 100%;
+                }
+                &:hover{
+                    background: $white;
+                    color: $accent-red;
+                    border: 2px solid $light-black;
+                }
+
+            }
+        }
+        .form-btn-container{
+            width: 100%;
+            margin: 2.5rem 0 0 0;
+            padding: 0px;
+            @include mobile{
+                margin: 1rem 0 0 0;
+            }
+            ul{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                @include mobile{
+                    flex-direction: column;
+                }
+                
+                li{
+                    width: auto;
+                    margin: 0px;
+                    padding: 0px 0 1rem 0;
+                    position: relative;
+                    label {
+                        display: flex; 
+                      align-items: center; 
+                        color: $accent-grey;
+                        font-size: 0.8rem;
+                        position: relative;
+                        @include mobile{
+                            align-items: flex-start;
+                        }
+                        span {
+                            width: 20px;
+                            height: 20px;
+                            display: flex;
+                            justify-content: center;
+                            border: 2px solid $accent-grey;
+                            margin-right: 15px;
+                            border-radius: 3px;
+                            transition: all .3s;
+                            @include mobile{
+                                width: 50px;
+                                height: 20px;
+                            }
+                        }
+                    }
+                    
+                   
+                    button[type="submit"]{
+                        width: auto;
+                        margin: 0px;
+                        padding: 1rem 7.5rem;
+                        background: $accent-red;
+                        border: none;
+                        color: $white;
+                        font-size: 1.5rem;
+                        cursor: pointer;
+                        transition: $base-transition;
+                        border: 2px solid transparent;
+                        font-weight: 600;
+                        @include mobile{
+                            padding: 1rem 5rem;
+                            width: 100%;
+                        }
+                        &:hover{
+                            background: $white;
+                            color: $accent-red;
+                            border: 2px solid $light-black;
+                        }
+    
+                    }
+                    @keyframes checked-box {
+                        0% {
+                            width: 0;
+                            height: 0;
+                            border-color: $accent-red;
+                            transform: translate(0,0) rotate(45deg);
+                        }
+                        33% {
+                            width: 4px;
+                            height: 0;
+                            border-color: $accent-red;
+                            transform: translate(0,0) rotate(45deg);
+                        }
+                        100% {
+                            width: 4px;
+                            height: 8px;
+                            border-color: $accent-red;
+                            transform: translate(0,-8px) rotate(45deg);
+                        }
+                    }
+                    
+                    @keyframes bounce {
+                        0% {
+                            transform: scale(1);
+                        }
+                        33% {
+                            transform: scale(.7);
+                        }
+                        100% {
+                            transform: scale(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+
+   
+}

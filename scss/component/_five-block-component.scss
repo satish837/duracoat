@@ -1,0 +1,122 @@
+.five-blocks-component{
+    max-width: 1366px;
+    margin: 0px auto;
+    padding: 2rem 0 0 0;
+    @include mobile{
+        padding: 1rem 0 0 0;
+    }
+    &.slider{
+        padding: 2rem 0 4rem 0;
+        ul{
+            display: block;
+            li{
+                padding: 0 0rem;
+                margin: 0 1.2%;
+                width: 18%;
+                @include mobile{
+                    width: 40%;
+                }
+                &::after{
+                    background: none;
+                }
+                .thumb{
+                    width: 100%;
+                    margin: 0px;
+                    padding: 0px;
+                    img{
+                        width: 100%;
+                        display: block;
+                    }
+                }
+            }
+        }
+        .arrow-position-top {
+            .flickity-prev-next-button{
+                &.next{
+                    right: 0;
+                }
+                &.previous{
+                    right: calc(0% + 50px);
+                }
+            }
+        }
+    }
+    .flickity-page-dots{
+        width: auto;
+        bottom: -55px;
+        @include mobile{
+            display: block;
+            bottom: -55px;
+            width: 100%;
+        }
+        .dot{
+            border: none;
+            margin: 0 0.8rem;
+            width: auto;
+        }
+    }
+    ul{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        @include mobile{
+            grid-template-columns: repeat(2, 1fr);
+            grid-row-gap: 2rem;
+        }
+            
+        li{
+            margin: 0px;
+            padding: 0px 1.5rem;
+            text-align: center;
+            width: 100%;
+            position: relative;
+            &::after{
+                position: absolute;
+                left: 0px;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 60%;
+                width: 1px;
+                content: "";
+                background: rgba($accent-grey, 0.4) ;
+            }
+            @include mobile{
+                width: 100%;
+            }
+            &:first-child{
+                &::after{
+                    background: none;
+                }
+            }
+            .icon{
+                width: auto;
+                margin: 0px auto;
+            }
+            .title{
+                font-size: 1.5rem;
+                color: $light-black;
+                line-height: 1;
+                padding: 0.5rem 0;
+                font-weight: 600;
+            }
+            .desc{
+                font-size: 1.125rem;
+                color: $light-black;
+                line-height: 1.2;
+                padding: 1rem 0;
+                width: 75%;
+                margin: 0px auto;
+                @include mobile{
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
+.five-blocks-component + .cta{
+    @include mobile{
+        margin-top: 5rem;
+    }
+}

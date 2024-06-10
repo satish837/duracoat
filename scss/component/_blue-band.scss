@@ -1,0 +1,82 @@
+.blue-band{
+    max-width: 1366px;
+    margin: 2rem auto;
+    padding: 0px;
+    position: relative;
+    width: 90%;
+    background: #0d4a83;
+    @include mobile{
+        width: 100%;
+        padding: 2rem 0;
+    }
+    img{
+        display: block;
+        @include mobile{
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+    .cont-holder{
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 70%;
+        @include mobile{
+            width: 90%;
+            position: static;
+            transform: none;
+            flex-direction: column;
+            margin: 0px auto;
+        }
+        .desc{
+            width: 55%;
+            text-align: center;
+            margin: 0px;
+            padding: 0px;
+            color: $white;
+            @include mobile{
+                width: 100%;
+            }
+        }
+        .checkout-cta{
+            width: auto;
+            padding: 0 5rem;
+            margin: 0px;
+            @include mobile{
+                padding: 0;
+                margin: 2rem 0;
+            }
+            a{
+                background: $white;
+                margin: 0px;
+                padding: 0.7rem 2.8rem 0.7rem 2rem;
+                color: $accent-red;
+                font-weight: 1.125rem;
+                font-weight: 600;
+                text-decoration: none;
+                position: relative;
+                transition: all 0.3s;
+                &:hover{
+                    background: $accent-red;
+                    color: $white;
+                }
+                &::after{
+                    content: "\f105";
+                    margin: 0px;
+                    padding: 0px;
+                    position: absolute;
+                    transform: translateY(-50%);
+                    top: 50%;
+                    right: 1.5rem;
+                    font-size: 1.4rem;
+                    font-family: "FontAwesome";
+                    line-height: 1;
+                }
+            }
+        }
+    }
+}

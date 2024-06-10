@@ -1,0 +1,52 @@
+.mobile-filter-panel{
+    display: none;
+    @include mobile{
+        bottom: 0.5rem;
+        width: 95%;
+        transform: translateY(0);
+        margin: 0px auto;
+        background: $dark-blue;
+        border-radius: 10px;
+        position: sticky;
+        position: -webkit-sticky;
+        display: block;
+    }
+    ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        li{
+            width: 33.33%;
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+            border-left: 1px solid rgba($white, 0.15);
+            a{
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                padding: 1rem 0;
+                text-decoration: none;
+                line-height: 1;
+                .icon{
+                    width: 15px;
+                    display: inline-block;
+                    margin: 0px 0.2rem;
+                    img{
+                        width: 100%;
+                    }
+                    &.filter{
+                        width: 20px;
+                    }
+                }
+                .text{
+                    width: auto;
+                    font-size: 1rem;
+                    color: $white;
+                    line-height: 1;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

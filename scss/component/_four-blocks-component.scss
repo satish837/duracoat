@@ -1,0 +1,118 @@
+.four-blocks-component{
+    width: 100%;
+    margin: 0px;
+    padding: 3rem 0 0 0;
+    .flickity-page-dots{
+        display: none;
+        @include mobile{
+            display: block;
+            bottom: -55px;
+            width: 100%;
+        }
+        .dot{
+            border: none;
+        }
+    }
+    &.show-dots{
+        .flickity-page-dots{
+            display: block;
+            bottom: -2.5rem;   
+        }
+    }
+    ul{
+        @include mobile{
+            flex-direction: column;
+        }
+         li{
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+            width: 25%;
+            @include mobile{
+                width: 70%;
+                border-left: 1px solid $border-grey;
+            }
+            &.no-border{
+                @include mobile{
+                    border: 0;
+                }
+            }
+            .icon{
+                width: auto;
+                margin: 0px auto;
+            }
+            .title{
+                font-size: 1.5rem;
+                color: $light-black;
+                line-height: 1;
+                padding: 0.5rem 0;
+                font-weight: 600;
+                @include mobile{
+                    font-size: 1.25rem;
+                }
+            }
+            .desc{
+                font-size: 1rem;
+                color: $light-black;
+                line-height: 1.2;
+                padding: 0 0;
+                width: 75%;
+                margin: 0px auto;
+            }
+            .wrap{
+                padding: 0.7rem;
+                .bind{
+                    background: $white;
+                    padding: 0.8rem 0.5rem;
+                    padding-bottom: 2rem;
+                }
+                .title{
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: $accent-blue;
+                    margin-bottom: 0.5rem;
+                }
+                p{
+                    font-size: 0.9rem;
+                    margin-bottom: 0.8rem;
+                    padding: 0 1.5rem;
+                }
+                .contact-details{
+                    ul{
+                        li{
+                            font-weight: 700;
+                            width: 100%;
+                            font-size: 0.9rem;
+                            border: 0;
+                            a{
+                                color: #333333;
+                                text-decoration: none;
+                                .fa{
+                                    position: relative;
+                                    top: 2px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .btn{
+                    display: inline-block;
+                    border: $accent-red solid 1px;
+                    padding: 10px 25px;
+                    color: $accent-red;
+                    text-decoration: none;
+                    transition: $base-transition;
+                    font-weight: 600;
+                    margin-top: 1rem;
+                    i{
+                        font-size: 0.8rem;
+                    }
+                    &:hover{
+                        background: $accent-red;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}

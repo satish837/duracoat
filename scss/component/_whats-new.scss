@@ -1,0 +1,123 @@
+.whats-new{
+    max-width: 1366px;
+    margin: 0px auto;
+    padding: 0px 0 2.8rem 0rem;
+    @include mobile{
+        padding: 0px;
+    }
+    ul{
+        overflow: visible;
+        li{
+            width: 23rem;
+            margin: 0 0 0 1.8rem;
+            padding: 0;
+            position: relative;
+            transition: 0.5s all;
+            @include mobile{
+                width: 75%;
+            }
+            .thumb{
+                width: 100%;
+                margin: 0px;
+                padding: 0px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                }
+            }
+            .description{
+                width: 100%;
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                padding: 0;
+                background: $dull-white;
+                transition: 0.5s all;
+                @include mobile{
+                    background: none;
+                }
+                h3{
+                    font-size: 1.25rem;
+                    margin: 1rem 1rem 0.5rem 1rem;
+                    padding: 0px 1rem 0 0;
+                    color: $light-black;
+                    font-weight: 600;
+                    min-height: 53px;
+                    @include mobile{
+                        color: $white;
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                        padding: 1rem 0;
+                    }
+                }
+                p{
+                    font-size: 1rem;
+                    margin: 0rem 1rem 0 1rem;
+                    padding: 0px 0rem 0 0;
+                    color: $light-black;
+                    transition: $base-transition;
+                    @include mobile{
+                        display: none;
+                    }
+                }
+                a{
+                    color: $accent-red;
+                    font-size: 1.25rem;
+                    padding: 1rem;
+                    display: block;
+                    text-align: left;
+                    transition: $base-transition;
+                    @include mobile{
+                        background: $accent-blue;
+                        color: $white;
+                        text-decoration: none;
+                        text-align: center;
+                        padding: 1rem;
+                    }
+                    span{
+                        display: none;
+                        font-size: 1.25rem;
+                        @include mobile{
+                            display: inline-block;
+                            padding: 0px 0.5rem;
+                        }
+                    }
+                }
+            }
+            &:hover{
+                p{
+                    display: none;
+                }
+                .description{
+                    background: none;
+                    h3{
+                        color: $white;
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                        padding: 1rem 0;
+                    }
+                    a{
+                        background: $accent-red;
+                        color: $white;
+                        text-decoration: none;
+                        text-align: center;
+                        padding: 1rem;
+                        span{
+                            display: inline-block;
+                            padding: 0px 0.5rem;
+                        }
+                    }
+                }
+            }
+            
+        }
+        .flickity-page-dots{
+            bottom: -50px;
+            @include mobile{
+                width: 100%;
+            }
+        }
+    }
+}

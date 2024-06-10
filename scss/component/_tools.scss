@@ -1,0 +1,89 @@
+.tools{
+    max-width: 1366px;
+    margin: 0px auto;
+    padding: 1.5rem 0 0 0;
+    ul{
+        li{
+            width: 32%;
+            margin: 0px;
+            padding: 0 0 0 0;
+            @include mobile{
+                width: 75%;
+                background: $dull-white;
+            }
+            &:nth-child(2n+0) {
+                margin: 0 2rem;
+                @include mobile{
+                    margin: 0 1rem;
+                }
+              }
+            .thumb{
+                width: 100%;
+                margin: 0px;
+                padding: 0px;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    display: block;
+                    transition: $base-transition;
+                }
+            }
+            &:hover{
+                .thumb{
+                    img{
+                        transform: scale(1.15);
+                    }
+                }
+               
+            }
+            .caption{
+                width: 100%;
+                padding:1.5rem 1rem;
+                background: $dull-white;
+                color: $light-black;
+                @include mobile{
+                    min-height: 140px;
+                }
+                    h3{
+                        font-size: 1.5625vw;
+                        margin: 0px;
+                        padding: 0px;
+                        color: $light-black;
+                        line-height: 1;
+                        font-weight: 600;
+                        @include mobile{
+                            font-size: 1.2rem;
+                        }
+                    }
+                    p{
+                        padding: 0.6rem 0;
+                        font-size: 1.171875vw;
+                        color: $accent-grey;
+                        @include mobile{
+                            font-size: 0.875rem;
+                            padding: 0.5rem 0;
+                        }
+                    }
+            }
+        }
+    }
+    .cta{
+        display: none;
+        @include mobile{
+            display: block;
+            margin: 4rem 0 0 0;
+        }
+        a{
+            text-transform: none;
+        }
+    }
+    .flickity-page-dots{
+        display: none;
+        @include mobile{
+            display: block;
+            width: 100%;
+            bottom: -50px;
+        }
+    }
+}
+

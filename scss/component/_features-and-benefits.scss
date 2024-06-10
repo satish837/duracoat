@@ -1,0 +1,66 @@
+.features-and-benefits{
+    max-width: 1366px;
+    margin: 0px auto;
+    padding: 3rem 0 0 0;
+    @include mobile{
+        width: 90%;
+        padding: 1.5rem 0 0 0;
+    }
+    .wrapper{
+        max-width: 100%;
+        margin: 0px auto;
+        ul{
+
+            li{
+                width: 16%;
+                margin: 0px;
+                padding: 2rem 1.6rem;
+                background: $dull-white;
+                @include mobile{
+                    width: 45%;
+                }
+                &:nth-child(2n+0){
+                    margin: 0px 5%;
+                    @include mobile{
+                        margin: 0px 2%;
+                    }
+                }
+                .thumb{
+                    width: 35%;
+                    margin: 0px auto;
+                    padding: 0px;
+                    img{
+                        width: 100%;
+                        display: block;
+                    }
+                }
+                .text{
+                    width: 100%;
+                    margin: 0px;
+                    padding: 1rem 0;
+                    text-align: center;
+                    color: $accent-grey;
+                    font-size: 1.125rem;
+                    line-height: 1.2;
+                }
+            }
+        }
+        .flickity-page-dots{
+            display: none;
+            @include mobile{
+                display: block;
+                bottom: -50px;
+                width: 100%;
+            }
+           
+            .dot{
+               background: none;
+                @include mobile{
+                    width: auto;
+
+                }
+                
+            }
+        }
+    }
+}

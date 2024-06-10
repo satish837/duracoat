@@ -1,0 +1,461 @@
+.three-col{
+    max-width: 1366px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    @include mobile{
+        flex-direction: column;
+    }
+    .left-col{
+        width: 21%;
+        margin: 0px;
+        padding: 0px;
+        .filters{
+            width: 100%;
+            @include mobile{
+                position: fixed;
+                width: 100%;
+                left: 0px;
+                bottom: 0;
+                background: $white;
+                z-index: 99;
+                margin: 0px;
+                display: block;
+                transform: translateY(100%);
+                transition: $base-transition;
+                &.active{
+                    transform: translateY(0);
+                    bottom: 3.2rem;
+                }
+            }
+            .heading{
+                width: 100%;
+                margin: 0rem 0 3rem 0;
+                padding: 0.5rem 1rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid $border-light-grey;
+                position: relative;
+                h3{
+                    font-size: 1.625rem;
+                    margin: 0px;
+                    padding: 0px;
+                }
+                .clear{
+                    position: absolute;
+                    right: 1rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    cursor: pointer;
+                    font-weight: 600;
+                    color: $accent-grey;
+                }
+            }
+            .filter{
+                width: 100%;
+                margin: 0px;
+                padding: 0px;
+                h3{
+                    font-size: 1.15rem;
+                    color: $accent-grey;
+                    margin: 0px;
+                    padding: 1rem;
+                    position: relative;
+                    cursor: pointer;
+                    &::after{
+                        position: absolute;
+                        right: 1rem;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background: url(../img/filter-heading-arrow.jpg) center top no-repeat;
+                        background-size: 100%;
+                        width: 13px;
+                        height: 7.5px;
+                        content: "";
+                    }
+                    &.active{
+                        &::after{
+                            background: url(../img/filter-heading-arrow.jpg) center bottom no-repeat;
+                            background-size: 100%;
+                        }
+                    }
+                }
+                ul{
+                    background: $grey-bg;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    padding: 0.5rem 1rem 0.5rem 1rem;
+                    flex-direction: column;
+                    display: none;
+                    li{
+                        width: 100%;
+                        margin: 0px;
+                        padding: 0.4rem 0;
+                        font-size: 1rem;
+                        color: $accent-grey;
+                        font-weight: 700;
+                        .stars{
+                            width: 100%;
+                            margin: 0px;
+                            padding: 0px;
+                            ul{
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                flex-direction: row;
+                                padding: 0;
+                                margin: 0;
+                                li{
+                                    width: auto;
+                                    padding: 0;
+                                    margin-right: 0.5rem;
+                                    font-size: 1.5rem;
+                                    color: $gold;
+                                    a{
+                                        font-size: 1.125rem;
+                                        color: $accent-grey;
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+                        }
+                        a{
+                            font-weight: 400;
+                            color: $grey-text;
+                            text-decoration: none;
+                        }
+                        .search-cont{
+                            width: 100%;
+                            margin: 0 auto;
+                            position: relative;
+                            @include mobile{
+                                width: 100%;
+                            }
+                            .input-text{
+                                border: 0;
+                                border: $accent-grey solid 1px;
+                                padding:0.7rem 1rem;
+                                outline: 0;
+                                background: $white;
+                                color: $accent-grey;
+                                width: 100%;
+                                font-size: 1rem;
+                                &::placeholder{
+                                    opacity: 0.7;
+                                }
+                                @include mobile{
+                                    padding-right: 30px;
+                                }
+                            }
+                            
+                            .submit-button{
+                                width: 7%;
+                                position: absolute;
+                                right: 1rem;
+                                top: 50%;
+                                transform: translate(0,-50%);
+                                display: flex;
+                                background: transparent;
+                                border: 0;
+                                cursor: pointer;
+                                color: #979797;
+                                align-items: center;
+                                font-size: 0.9rem;
+                                @include mobile{
+                                    width: 20px;
+                                }
+                               
+                                svg{
+                                    width: 100%;
+                                    path{
+                                        fill: #979797;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+           
+        }
+    }
+    .mid-col{
+        width: 54%;
+        margin: 0px;
+        padding: 0px;
+        background: $dull-white;
+        @include mobile{
+            width: 100%;
+        }
+        .content{
+            width: 100%;
+            background: $dull-white;
+            margin: 0px;
+            padding: 2rem;
+            .head{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                @include mobile{
+                    display: none;
+                }
+                .left{
+                    width: 80%;
+                    ul{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        li{
+                            width: auto;
+                            padding: 0.2rem 2rem 0.2rem 0.8rem;
+                            font-size: 0.9rem;
+                            border: 1px solid $border-grey;
+                            margin: 0 0.5rem 0 0;
+                            color: $accent-grey;
+                            position: relative;
+                            font-weight: 500;
+                            span{
+                                position: absolute;
+                                right: 0.5rem;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                font-size: 0.8rem;
+                                a{
+                                    color: $accent-grey;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                .right{
+                    width: auto;
+                    margin: 0px;
+                    padding: 0px;
+                    select{
+                        background: none;
+                        border:none;
+                        width: auto;
+                        font-size: 1.125rem;
+                        appearance: none;
+                        -moz-appearance: none;
+                        -webkit-appearance: none;
+                        background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20448%22%20enable-background%3D%22new%200%200%20256%20448%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.arrow%7Bfill%3A%23424242%3B%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22arrow%22%20d%3D%22M255.9%20168c0-4.2-1.6-7.9-4.8-11.2-3.2-3.2-6.9-4.8-11.2-4.8H16c-4.2%200-7.9%201.6-11.2%204.8S0%20163.8%200%20168c0%204.4%201.6%208.2%204.8%2011.4l112%20112c3.1%203.1%206.8%204.6%2011.2%204.6%204.4%200%208.2-1.5%2011.4-4.6l112-112c3-3.2%204.5-7%204.5-11.4z%22%2F%3E%3C%2Fsvg%3E%0A");
+                        background-position: right 10px center;
+                        background-repeat: no-repeat;
+                        padding-right: 2rem;
+                        &::-ms-expand { display: none };
+                        &:focus{
+                            outline: none;
+                        }
+                        option{
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+            .contractor-card-holder{
+                width: 100%;
+                margin: 1rem 0;
+                padding: 0px;
+                ul{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    flex-wrap: wrap;
+                    li{
+                        width: 48%;
+                        margin: 1rem 0;
+                        @include mobile{
+                            width: 100%;
+                        }
+                        .contractor-card{
+                            width: 100%;
+                            margin: 0px;
+                            background: $white;
+                            padding: 2rem;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            position: relative;
+                            .thumb{
+                                width: 100%;
+                                text-align: center;
+                            }
+                            .share{
+                                position: absolute;
+                                right: 1rem;
+                                top: 1rem;
+                            }
+                            .contractor-name{
+                                text-align: center;
+                                font-size: 1.25rem;
+                                padding: 0px;
+                                margin: 0.2rem 0;
+                                color: $light-black;
+                                font-weight: 600;
+                            }
+                            .location{
+                                text-align: center;
+                                font-size: 0.875rem;
+                                padding: 0px;
+                                margin: 0rem 0;
+                                color: $light-black;
+                            }
+                            .rating{
+                                width: 100%;
+                                margin: 0px;
+                                padding: 0.2rem 0;
+                                ul{
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    li{
+                                        margin: 0 0.2rem;
+                                        padding: 0px;
+                                        font-size: 0.875rem;
+                                        width: auto;
+                                        a{
+                                            color: $accent-grey;
+                                            text-decoration: none;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            i{
+                                                color: $gold;
+                                                font-size: 1.2rem;
+                                                line-height: 1;
+                                                margin: 0 0.5rem 0 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .primery-cta{
+                                width: 100%;
+                                margin: 0.5rem 0;
+                                padding: 0px;
+                                ul{
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    flex-wrap: wrap;
+                                    li{
+                                        margin: 0.4rem;
+                                        padding: 0px;
+                                        width: auto;
+                                        text-align: center;
+                                        a{
+                                            border: 1px solid rgba($accent-red, 0.6);
+                                            color: rgba($accent-red, 0.6);
+                                            padding: 0.4rem;
+                                            display: block;
+                                            text-decoration: none;
+                                            font-size: 0.875rem;
+                                            text-transform: uppercase;
+                                            transition: all 0.3s;
+                                            &:hover{
+                                                background: $accent-red;
+                                                color: $white;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .cta{
+                                margin: 1rem 0 0 0;
+                                padding: 0px;
+                                a{
+                                    &::after{
+                                        content: "";
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    .right-col{
+        width: 23%;
+        margin: 0px;
+        padding: 0px;
+        @include mobile{
+            width: 100%;
+        }
+        .expert-service-block{
+            width: 100%;
+            padding: 2rem;
+            .head-desc{
+                width: 80%;
+                padding: 0;
+            }
+            .service-type{
+                padding: 0 0 0 5%;
+                width: 90%;
+                margin: 0px auto;
+                ul{
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    &.radio-container{
+                        .radio{
+                            font-size: 1rem;
+                            margin: 0px 0.6rem;
+                            input[type="radio"]{
+                                + .radio-label {
+                                    padding-left: 10px;
+                                    &:before {
+                                      content: '';
+                                      margin-left: -25px;
+                                      
+                                    }
+                                  }
+                            }
+                        }
+                    }
+                    li{
+                        margin: 0.4rem 0;
+                    }
+                }
+            }
+            .text-input-container{
+                ul{
+                    flex-direction: column;
+                    li{
+                        width: 90%;
+                        margin: 0.8rem auto;
+                        
+                    }
+                }
+            }
+            .form-btn-container{
+                margin: 1rem auto;
+                width: 90%;
+                ul{
+                    flex-direction: column;
+                    li{
+                        &.submit{
+                            width: 100%;
+                            margin-top: 2rem;
+                            button[type="submit"]{
+                                padding: 1rem;
+                                font-size: 1.2rem;
+                            }
+                        }
+                        label{
+                            align-items: flex-start;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

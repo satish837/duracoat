@@ -1,0 +1,99 @@
+.right-panel{
+    width: 185px;
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    right: -135px;
+    bottom: 50%;
+    transform: translateY(50%);
+    z-index: 9999;
+    @include mobile{
+        bottom: 0.5rem;
+        width: 95%;
+        transform: translateY(0);
+        margin: 0px auto;
+        background: $dark-blue;
+        border-radius: 10px;
+        position: sticky;
+        position: -webkit-sticky;
+        z-index: 99999;
+    }
+    ul{
+        @include mobile{
+            display: flex;
+            justify-content: space-between;
+        }
+        li{
+            &:last-child{
+                a{
+                    &::after{
+                        background: transparent;
+                    }
+                }
+                
+            }
+            a{
+                color: #fff;
+                text-decoration: none;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 0.8rem;
+                transition: all 0.3s;
+                transform: translateX(0);
+                background: $accent-blue;
+                
+                @include mobile{
+                    border-radius: 10px;
+                    background: $dark-blue;
+                }
+                &::after{
+                    height: 1px;
+                    width: 100%;
+                    position: absolute;
+                    left: 0px;
+                    bottom: 1px;
+                    content: "";
+                    background: rgba($white, 0.4);
+                    @include mobile{
+                        display: none;
+                    }
+                }
+                &:hover{
+                    transform: translateX(-73%);
+                    @include mobile{
+                        transform: none;
+                    }
+                    &::after{
+                        transform: translateX(73%);
+                    }
+                }
+
+                .icon{
+                    width: 1.5rem;
+                    text-align: center;
+                    margin-right: 1rem;
+                    @include mobile{
+                        width: 75%;
+                        margin: 0px auto;
+                    }
+                    img{
+                        width: 100%;
+                        display: block;
+                    }
+                }
+                .text{
+                    font-size: 1rem;
+                    color: $white;
+                    font-weight: 500;
+                    line-height: 1;
+                    @include mobile{
+                        display: none;
+                    }
+                }
+                
+            }
+            
+        }
+    }
+}

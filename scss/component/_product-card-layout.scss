@@ -1,0 +1,83 @@
+.prd-cont {
+    width: 100%;
+    margin: 0px;
+    padding: 2rem;
+    background: $white;
+    position: relative;
+    .like{
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        font-size: 1.5rem;
+        color: $grey-text;
+        cursor: pointer;
+        transition: $base-transition;
+        &.active{
+            color: $accent-red;
+        }
+    }
+    .thumb{
+        width: 80%;
+        margin: 0px auto;
+        padding: 0px;
+        img{
+            width: 100%;
+        }
+    }
+    .title{
+        width: 90%;
+        margin: 0px auto;
+        padding: 1rem 0;
+        font-size: 1.25rem;
+        color: $accent-blue;
+        text-align: center;
+        font-weight: 600;
+    }
+    .desc{
+        width: 90%;
+        margin: 0px auto;
+        padding: 0 0;
+        font-size: 0.875rem;
+        color: $accent-grey;
+        text-align: center;
+    }
+    .icons{
+        width: 100%;
+        margin: 0px;
+        padding: 1.5rem 0;
+        ul{
+           display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 1rem;
+            grid-row-gap: 1rem;
+            li{
+                margin: 0px;
+                padding: 0px;
+                width: auto;
+                .icon{
+                    width: 40%;
+                    margin: 0px auto;
+                    padding: 0px;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .text{
+                    width: 100%;
+                    font-size: 0.75rem;
+                    color: $accent-grey;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .cta{
+        margin: 0px;
+        padding: 0;
+        a{
+            text-transform: none;
+        }
+        
+    }
+}

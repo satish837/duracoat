@@ -1,0 +1,200 @@
+.how-to-apply{
+    width: 70%;
+    margin: 2rem auto 0 auto;
+    padding: 0px;
+    @include mobile{
+        width: 90%;
+        margin: 3rem auto 0 auto;
+    }
+    .wrap{
+        width: 100%;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 17%;
+            transform: translateX(-50%);
+            height: 1px;
+            width: 80%;
+            background: rgba($accent-grey, 0.3);
+            z-index: -1;
+            @include mobile{
+                display: none;
+            }
+        }
+        ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            @include mobile{
+                flex-direction: column;
+            }
+            li{
+                width: 25%;
+                margin: 0px;
+                padding: 0px;
+                text-align: center;
+                &:nth-child(2n+0){
+                    @include mobile{
+                       flex-direction: row-reverse;
+                       margin: 1rem 0;
+                    }
+                }
+                @include mobile{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                }
+                .col-1{
+                    @include mobile{
+                        width: 48%;
+                    }
+                }
+                .col-2{
+                    @include mobile{
+                        width: 50%;
+                        padding-left: 1.5rem;
+                    }
+                }
+                .prd-thumb{
+                    width: 60%;
+                    margin: 0px auto;
+                    @include mobile{
+                        width: 100%;
+                    }
+                    img{
+                        width: 100%;
+                    }
+                }
+                .counter{
+                    font-size: 1rem;
+                    color: $light-black;
+                    width: 25%;
+                    margin: 0px auto;
+                    text-align: center;
+                    font-weight: 600;
+                    line-height: 1;
+                    text-transform: uppercase;
+                    background: $white;
+                    span{
+                        font-size: 2.813rem;
+                        display: block;
+                        line-height: 1;
+
+                    }
+                    
+                }
+                .title{
+                    width: 100%;
+                    font-size: 1.25rem;
+                    color: $light-black;
+                    text-align: center;
+                    font-weight: 600;
+                    @include mobile{
+                        text-align: left;
+                    }
+                }
+                .desc{
+                    width: 60%;
+                    margin: 0px auto;
+                    font-size: 1rem;
+                    color: $light-black;
+                    text-align: center;
+                    @include mobile{
+                        width: 100%;
+                        text-align: left;
+                    }
+                }
+                .sub-desc{
+                    width: 100%;
+                    margin: 0px auto;
+                    font-size: 1rem;
+                    color: $light-black;
+                    text-align: center;
+                    font-weight: 600;
+                    @include mobile{
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+ 
+}
+.application-process{
+    width: 1366px;
+    margin: 4rem auto 0px auto;
+    padding: 0px;
+    background: $dull-white;
+    padding: 2rem;
+    @include mobile{
+        width: 100%;
+    }
+    .title{
+        width: 100%;
+        text-align: center;
+        font-size: 1.5rem;
+        color: $light-black;
+        font-weight: 600;
+        @include mobile{
+            margin-bottom: 1rem;
+        }
+    }
+    ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        @include mobile{
+            flex-direction: column;
+        }
+        li{
+            width: 25%;
+            margin: 2rem 3.5%;
+            padding: 0px 0;
+            font-size: 1.25rem;
+            position: relative;
+            color: $accent-grey;
+            border-right: 1px solid rgba($accent-grey, 0.3);
+            @include mobile{
+                width: 100%;
+                margin:0.5rem 0 0.5rem 0.5rem;
+                border: none;
+                font-size: 1rem;
+            }
+            &:last-child{
+                border: none;
+            }
+            &::before{
+                content: "\f111";
+                font-family: "FontAwesome";
+                position: absolute;
+                left: -1.5rem;
+                top: 0.2rem;
+                font-size: 0.8rem;
+                @include mobile{
+                    font-size: 0.6rem;
+                    left: -1rem;
+                }
+            }
+        }
+    }
+   
+}
+.video-holder{
+    width: 80%;
+    margin: 2rem auto 0 auto;
+    padding: 0px;
+    .video{
+        width: 100%;
+        margin: 2rem 0 0 0;
+        padding: 0px;
+        img{
+            width: 100%;
+            display: block;
+        }
+    }
+    
+}
